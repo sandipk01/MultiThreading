@@ -28,11 +28,6 @@ public class Stack implements Runnable {
         return stack[top--];
     }
 
-    public void print() {
-        Arrays.stream(stack)
-                .forEach(e -> System.out.print(e + " "));
-    }
-
     public String toString() {
         String str = "[";
         for (int index = 0; index <= top; index++) {
@@ -46,8 +41,8 @@ public class Stack implements Runnable {
     @Override
     public void run() {
         Stack stack = new Stack(10);
-        stack.push(2);
-        stack.push(4);
+        stack.push(3);
+        stack.push(8);
         stack.push(6);
         stack.pop();
         System.out.println(stack);
