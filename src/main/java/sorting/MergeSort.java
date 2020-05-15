@@ -4,20 +4,16 @@ public class MergeSort implements Runnable {
 
     private static void printArray(int[] array) {
 
-        for (int i : array) {
+        for (int i : array)
             System.out.print(i + " ");
-        }
         System.out.println();
 
     }
 
     private static int[] mergeSort(int[] array) {
 
-        if (array.length <= 1) {
-
+        if (array.length <= 1)
             return array;
-
-        }
 
         int midpoint = array.length / 2;
 
@@ -26,28 +22,18 @@ public class MergeSort implements Runnable {
         int[] right;
 
         // if array length is an even number.
-        if (array.length % 2 == 0) {
-
+        if (array.length % 2 == 0)
             right = new int[midpoint];
-
-        } else {
-
+        else
             right = new int[midpoint + 1];
 
-        }
-
         // insert elements in left and right array
-        for (int i = 0; i < midpoint; i++) {
-
+        for (int i = 0; i < midpoint; i++)
             left[i] = array[i];
 
-        }
 
-        for (int j = 0; j < right.length; j++) {
-
+        for (int j = 0; j < right.length; j++)
             right[j] = array[midpoint + j];
-
-        }
 
         int[] result;
 
